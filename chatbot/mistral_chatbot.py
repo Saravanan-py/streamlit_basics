@@ -1,9 +1,7 @@
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.messages import HumanMessage,AIMessage
 from langchain_core.output_parsers import StrOutputParser
 import streamlit as st
 from langchain_community.llms import Ollama
-from langchain.memory import ChatMessageHistory
 
 
 prompt = ChatPromptTemplate.from_messages(
