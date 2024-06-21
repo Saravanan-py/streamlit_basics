@@ -14,7 +14,7 @@ prompt = ChatPromptTemplate.from_messages(
 st.title("Ollama PYTHON based Chatbot")
 text = st.text_input("Type your text: ")
 if text:
-    chat = Ollama(model="mistral")
+    chat = Ollama(model="mistral", endpoint="http://localhost:11434/api/generate")
     output = StrOutputParser()
     chain = prompt | chat | output
     ai_response = chain.invoke({'messages':text})
